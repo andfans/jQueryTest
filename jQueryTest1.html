@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <title>jQueryTest</title>
+        <script>
+            var i = 1;
+            $(document).ready(function(){
+                $("p").click(function() {
+                    $(this).hide();
+                });
+                $("#button1").click(function(){
+                    $("p").hide();
+                });
+                $("#button2").click(function(){
+                    $("#test").hide();
+                });
+                $("#button3").click(function(){
+                    $(".test").hide();
+                });
+                // $("p").hover(function(){
+                //     $(this).css("background-color","yellow");
+                // },function(){
+                //     $(this).css("background-color","pink");
+                // });
+                $("input").keypress(function(){
+                    $("span").text(i+=1);
+                });
+                $("#button4").click(function(){
+                    $("input").keypress();
+                });
+            });
+        </script>
+    </head>
+    <body>
+       <h1 class="test">这是一个标题</h1>
+       <p>第1段</p> 
+       <p id="test">第2段</p> 
+       <p class="test">第3段</p> 
+       <button id="button1">点我</button>
+       <button id="button2">点我隐藏第二段</button>
+       <button id="button3">点我隐藏class=test的元素</button><br/>
+       <button id="button4">点我出发一次按键的事件 </button><br/>
+       输入你的名字：<input type="text">
+       <p>按键的次数：<span>0</span></p>
+    </body>
+</html>
