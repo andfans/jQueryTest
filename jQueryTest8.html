@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <title>jQueryTest</title>
+    <script>
+      $(document).ready(function() {
+        $("#flip").click(function() {
+          $("#panel").slideToggle("slow");
+        });
+        $("button").click(function() {
+          var div = $("div");
+          // div.animate({ height: "300px", opacity: "0.4" }, "slow");
+          // div.animate({ height: "300px", opacity: "0.8" }, "slow");
+          // div.animate({ height: "100px", opacity: "0.4" }, "slow");
+          // div.animate({ height: "100px", opacity: "0.8" }, "slow");
+
+          div.animate({ left: "100px" }, "slow");
+          div.animate({ fontSize: "3em" }, "slow");
+          console.log("hwerio");
+        });
+      });
+    </script>
+    <style>
+      #panel,
+      #flip {
+        padding: 5px;
+        text-align: center;
+        background-color: #e5eecc;
+        border: solid 1px #c3c3c3;
+      }
+      #panel {
+        padding: 50px;
+        /* display: none;  */
+      }
+    </style>
+  </head>
+  <body>
+    <button>开始动画</button>
+    <div id="flip">点我滑下面板</div>
+    <div id="panel">Hello word!</div>
+    <div
+      style="background: #98bf21;height: 100px;width: 100px;position: absolute;"
+    ></div>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <title>jQueryTest</title>
+    <script>
+      var i = 0;
+      var j = 0;
+      $(document).ready(function() {
+        $("input")
+          .focus(function() {
+            $("span")
+              .css("display", "inline")
+              .fadeOut(2000);
+          })
+          .blur(function() {
+            alert("输入框失去了焦点！");
+          });
+
+        $(window).resize(function() {
+          alert(++i);
+        });
+        $("div").scroll(function() {
+          $("#countter").text((j += 1));
+        });
+        $("#p1").hover(
+          function() {
+            alert("你进入了 p1!");
+          },
+          function() {
+            alert("拜拜! 现在你离开了 p1!");
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <input type="text" />
+    <span>请输入您的电话号码？</span>
+    <p>点击输入框获取焦点</p>
+    <div
+      style="border:1px solid black;width:200px;height: 100px;overflow: scroll"
+    >
+      菜鸟教程 —— 学的不仅是技术，更是梦想！菜鸟教程 ——
+      学的不仅是技术，更是梦想！ 菜鸟教程 —— 学的不仅是技术，更是梦想！菜鸟教程
+      —— 学的不仅是技术，更是梦想！
+    </div>
+    <p id="countter"></p>
+    <p id="p1">请将鼠标移到该段落</p>
+  </body>
+</html>

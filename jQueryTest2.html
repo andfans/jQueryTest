@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <title>jQueryTest</title>
+    <script>
+      $(document).ready(function() {
+        $("input").keydown(function() {
+          $("input").css("background-color", "yellow");
+        });
+        $("input").keyup(function() {
+          $("input").css("background-color", "pink");
+        });
+        $("input").change(function() {
+          alert("文本已被修改");
+        });
+        $("form").submit(function(event) {
+          event.preventDefault();
+          alert("提交");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    输入名字：<input type="text" />
+    <br />
+    <form action="https://www.runoob.com">
+      First name:
+      <input type="text" name="Firstname" value="Mickey" /><br />
+      Last name:
+      <input type="text" name="Lastname" value="Mouse" /><br />
+      <input type="submit" value="提交" />
+    </form>
+  </body>
+</html>

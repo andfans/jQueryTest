@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <title>jQueryTest</title>
+    <script>
+      $(document).ready(function() {
+        $("#hide").click(function() {
+          $("p").hide(3000, "linear", function() {
+            alert("hide方法已完成。");
+          });
+        });
+        $("#show").click(function() {
+          $("p").show(3000, "linear", function() {
+            alert("show方法已完成。");
+          });
+        });
+        $("#toggle").click(function() {
+          $("p").toggle();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p>这是一个段落。。。。</p>
+    <button id="hide">隐藏</button>
+    <button id="show">显示</button>
+    <button id="toggle">隐藏/显示</button>
+  </body>
+</html>
