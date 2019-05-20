@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <title>jQueryTest</title>
+    <script>
+      $(document).ready(function() {
+        // $("button").click(function() {
+        //   $("#p1")
+        //     .css("color", "red")
+        //     .slideUp(2000)
+        //     .slideDown(2000);
+        // });
+
+        $("#btn1").click(function() {
+          alert($("#test").text());
+        });
+        $("#btn2").click(function() {
+          alert($("#test").html());
+        });
+        $("#buttonId").click(function() {
+          alert($("#runoob").attr("href"));
+        });
+        $("#btn3").click(function() {
+          $("#buttonId").html("被设置了文本");
+        });
+      });
+    </script>
+    <style></style>
+  </head>
+  <body>
+    <p id="p1">菜鸟教程！</p>
+    <button>点我</button>
+    <p id="test">这是段落中<b>粗体</b> 的文本。</p>
+    <button id="btn1">显示文本</button>
+    <button id="btn2">显示HTML</button>
+    <p>名称：<input id="inputTest" type="text" value="菜鸟教程" /></p>
+    <p><a href="//www.runoob.com" id="runoob">菜鸟教程</a></p>
+    <button id="buttonId">显示值</button>
+    <button id="btn3">设置文本</button>
+  </body>
+</html>

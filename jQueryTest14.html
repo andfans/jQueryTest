@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <title>jQueryTest</title>
+    <script>
+      $(document).ready(function() {
+        $("button").click(function() {
+          // alert($("p").css("background-color"));
+          alert($("#div1").height());
+        });
+      });
+    </script>
+    <style></style>
+  </head>
+  <body>
+    <h2>这是一个标题</h2>
+    <p style="background-color:#ff0000">这是一个段落。</p>
+    <p style="background-color:#00ff00">这是一个段落。</p>
+    <p style="background-color:#0000ff">这是一个段落。</p>
+    <div
+      id="div1"
+      style="height:100px;width:300px;padding:10px;margin:3px;border:1px solid blue;background-color:lightblue;"
+    ></div>
+    <br />
+    <button>返回第一个 p 元素的 background-color</button>
+  </body>
+</html>

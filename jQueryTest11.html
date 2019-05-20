@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <title>jQueryTest</title>
+    <script>
+      $(document).ready(function() {
+        $("#btn1").click(function() {
+          // $("#test1").text(function(i, originText) {
+          //   return "旧 html：" + originText + i;
+          // });
+          // $("#runoob").attr({ href: "www.baidu.com", title: "jQuery教程" });
+          $("#test1").prepend("<b>追加文本</b>");
+        });
+      });
+      function appendText() {
+        var txt1 = "<p>文本。</p>";
+        var txt2 = $("<p></p>").text("文本。");
+        var txt3 = document.createElement("p");
+        txt3.innerHTML = "文本。";
+        $("body").append(txt1, txt2, txt3);
+      }
+    </script>
+    <style></style>
+  </head>
+  <body>
+    <p id="test1">这是一个有<b>粗体</b>字的段落。</p>
+    <a id="runoob" href="https://www.runoob.com">菜鸟教程</a>
+    <button id="btn1">显示 新/旧</button>
+    <button onclick="appendText()">追加文本</button>
+  </body>
+</html>
